@@ -16,3 +16,47 @@ function pigIt (str) {
     }
     return pigLatin.join(' ');
   }
+
+
+const pigIt = str => {
+  let strArr = str.split(' ');
+  let arrayContainer = [];
+  for(let word of strArr) {
+    if((/([a-zA-Z])/).test(word)) {
+      arrayContainer.push(word.substring(1) + word[0] + 'ay')
+    } else {
+      arrayContainer.push(word);
+    }
+  }
+  return arrayContainer.join(' ')
+}
+
+
+const pigIt = str => {
+  let strArr = str.splice(' ');
+  let arrayContainer = [];
+  for(let word of strArr) {
+    if((/([a-zA-Z])/).test(word)) {
+      arrayContainer.push(word.substring(1) + word[0] + 'ay')
+    } else {
+      arrayContainer.push(word);
+    }
+  }
+  return arrayContainer.join(' ')
+}
+
+
+
+const pigIt = str => {
+  let strArr = str.splice(' ');
+  let arrayContainer = [];
+  for(let word of strArr) {
+    if((/([a-zA-Z])/).test(word)) {
+      arrayContainer.push(word.substring(1) + word[0] + 'ay')
+    } else {
+      arrayContainer.push(word)
+    }
+  }
+  return arrayContainer.join(' ')
+}
+
