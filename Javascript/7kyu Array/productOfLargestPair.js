@@ -43,4 +43,4 @@ function maxProduct(a) {
      }
      return max1 * max2;
    }
-
+ 
