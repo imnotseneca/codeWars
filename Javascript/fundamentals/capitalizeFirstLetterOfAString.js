@@ -12,16 +12,16 @@ JavaScript / CoffeeScript: Extend the String prototype with a method capitalize(
 Furthermore, the built-in string methods toUpperCase() and toLowerCase() are disabled for this Kata.
  */
 
-String.prototype.capitalize = function() {
-    if (this === '') {
-      return '';
-    }
-  
-    const firstChar = this.charAt(0);
-    const capitalizedFirstChar = String.fromCharCode(firstChar.charCodeAt(0) - 32);
-  
-    return capitalizedFirstChar + this.slice(1);
-  };
+String.prototype.capitalize = function capitalize() {
+  if (this === '') {
+    return '';
+  }
+
+  const firstChar = this.charAt(0);
+  const capitalizedFirstChar = firstChar >= 'a' && firstChar <= 'z' ? String.fromCharCode(firstChar.charCodeAt(0) - 32) : firstChar;
+
+  return capitalizedFirstChar + this.slice(1);
+}
   /*
   
   -Define a function called capitalize that takes a string as input.
