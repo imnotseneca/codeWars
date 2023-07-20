@@ -35,3 +35,9 @@ function alphabetic(s) {
     }
     return tracker
   }
+
+  //simpler version
+  function alphabetic(s) {
+  const splitedArr = s.split('')
+  return s === splitedArr.sort().join('')
+}
